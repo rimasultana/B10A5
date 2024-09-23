@@ -37,44 +37,59 @@
     </script>
   </head>
   <body class="font-lexend">
-    <header class="bg-zinc-50">
-      <!-- navBar start -->
-      <div class="navbar w-11/12 mx-auto py-10">
-        <div class="navbar-start">
-          <a class="btn text-xl bg-primary px-6">Blog</a>
-        </div>
-        <div class="navbar-centerl flex gap-2">
-          <img class="w-7" src="images/logo.png" alt="" />
-          <div class="flex gap-1 font-semibold text-xl">
-            <p>Donate</p>
-            <p>Bangladesh</p>
+    <!-- <header class="sticky top-0 z-5 backdrop-blur-2xl"> -->
+    <!-- navBar start -->
+    <header>
+      <section class="bg-zinc-50">
+        <nav class="navbar w-11/12 mx-auto py-5 md:py-10 flex flex-row md:flex-row gap-4 items-center">
+          <div class="navbar-start items-center">
+            <a class="btn text-[10px] md:text-lg lg:text-xl bg-primary px-6">Blog</a>
           </div>
-        </div>
-        <div class="navbar-end">
-          <img src="images/coin.png" alt="" />
-          <a class="btn btn-ghost text-xl text-gray-400">5500 BDT</a>
-        </div>
-      </div>
+          <div class="navbar-center flex gap-1 items-center">
+            <img class="lg:w-7 w-4 md:w-5" src="images/logo.png" alt="" />
+            <div class="flex gap-1 font-semibold text-[10px] md:text-lg lg:text-xl">
+              <p>Donate</p>
+              <p>Bangladesh</p>
+            </div>
+          </div>
+          <div class="navbar-end mt-4 md:mt-0 flex gap-0 items-center">
+            <img class="w-4 lg:w-8 md:w-6" src="images/coin.png" alt="" />
+            <a class="btn btn-ghost text-[10px] md:text-lg lg:text-xl text-gray-400">5500 BDT</a>
+          </div>
+        </nav>
+      </section>
+      
+      
+
       <!-- navBar End -->
+      <!-- Button Start -->
+      <section class="shadow py-1">
+        <div
+          class="flex flex-col items-center justify-center gap-5 mt-3 md:mt-10 mb-10 text-xl font-medium"
+        >
+          <button class="btn bg-primary py-3 md:py-4 px-5 md:px-7">
+            Donation
+          </button>
+          <button
+            class="btn py-3 md:py-4 px-6 md:px-8 text-secondary border-2 border-gray-300"
+          >
+            History
+          </button>
+        </div>
+      </section>
+
+      <!-- Button End -->
     </header>
     <main>
-      <!-- Button Start -->
-      <div
-        class="flex items-center justify-center gap-5 mt-20 mb-10 text-xl font-medium"
-      >
-        <button class="btn bg-primary py-4 px-7">Donation</button>
-        <button class="btn py-4 px-8 text-secondary border-2 border-gray-300">
-          History
-        </button>
-      </div>
-      <!-- Button End -->
       <!-- Donate Banner part Start -->
-      <section class="w-11/12 mx-auto mb-20">
+      <section class="w-11/12 mx-auto mt-10 mb-20">
         <div class="space-y-6">
           <!-- card-1 start -->
-          <div class="flex  gap-10 border-2 border-gray-300 rounded-2xl p-8">
+          <div
+            class="flex flex-col lg:flex-row gap-10 border-2 border-gray-200 rounded-2xl p-4 md:p-8"
+          >
             <div class="">
-              <img src="images/noakhali.png" alt="" />
+              <img src="images/noakhali.png" alt="" class="w-full md:w-auto" />
             </div>
             <div class="flex-1">
               <button class="btn">
@@ -86,94 +101,93 @@
               <p class="text-secondary mt-6">
                 Noakhali, Bangladesh has been significantly affected by floods,
                 which have caused severe damage to homes, infrastructure, and
-                people's livelihoods. Many families have been displaced, and there
-                is an urgent need for relief in the form of food, clean water,
-                medicine, and shelter. Local and international organizations,
-                along with individuals, are stepping up to provide necessary aid.
+                people's livelihoods.
               </p>
-  
+
               <input
                 type="number"
                 placeholder="Write Donation Amount"
-                class="input w-full border-2 border-gray-300 mt-8 px-14"
+                class="input w-full border-2 border-gray-200 mt-8 px-5 md:px-14"
               />
-              <button class="btn w-full bg-primary text-lg font-semibold mt-8 ">
+              <button class="btn w-full bg-primary text-lg font-semibold mt-8">
                 Donate Now
               </button>
             </div>
           </div>
-          <!-- card-1  End-->
-           <!-- card-2 Start -->
-           <div class="flex gap-10 border-2 border-gray-300 rounded-2xl p-8">
+          <!-- card-1 End -->
+
+          <!-- card-2 Start -->
+          <div
+            class="flex flex-col lg:flex-row gap-10 border-2 border-gray-200 rounded-2xl p-4 md:p-8"
+          >
             <div class="">
-              <img src="images/noakhali.png" alt="" />
+              <img src="images/feni.png" alt="" class="w-full md:w-auto" />
             </div>
             <div class="flex-1">
               <button class="btn">
                 <span><img src="images/coin.png" alt="" /></span>600 BDT
               </button>
               <h2 class="text-xl font-bold mt-6">
-                Donate for Flood Relief in Feni,Bangladesh
+                Donate for Flood Relief in Feni, Bangladesh
               </h2>
               <p class="text-secondary mt-6">
-                Noakhali, Bangladesh has been significantly affected by floods,
+                Feni, Bangladesh has been significantly affected by floods,
                 which have caused severe damage to homes, infrastructure, and
-                people's livelihoods. Many families have been displaced, and there
-                is an urgent need for relief in the form of food, clean water,
-                medicine, and shelter. Local and international organizations,
-                along with individuals, are stepping up to provide necessary aid.
+                people's livelihoods.
               </p>
-  
+
               <input
                 type="number"
                 placeholder="Write Donation Amount"
-                class="input w-full border-2 border-gray-300 mt-8 px-14"
+                class="input w-full border-2 border-gray-200 mt-8 px-5 md:px-14"
               />
-              <button class="btn w-full bg-primary text-lg font-semibold mt-8 ">
+              <button class="btn w-full bg-primary text-lg font-semibold mt-8">
                 Donate Now
               </button>
             </div>
           </div>
-           <!-- card-2 End-->
-            <!-- Card-3 Start -->
-            <div class="flex gap-10 border-2 border-gray-300 rounded-2xl p-8">
-              <div class="">
-                <img src="images/noakhali.png" alt="" />
-              </div>
-              <div class="flex-1">
-                <button class="btn">
-                  <span><img src="images/coin.png" alt="" /></span>2400 BDT
-                </button>
-                <h2 class="text-xl font-bold mt-6">
-                  Donate for Flood Relief in Feni,Bangladesh
-                </h2>
-                <p class="text-secondary mt-6">
-                  Noakhali, Bangladesh has been significantly affected by floods,
-                  which have caused severe damage to homes, infrastructure, and
-                  people's livelihoods. Many families have been displaced, and there
-                  is an urgent need for relief in the form of food, clean water,
-                  medicine, and shelter. Local and international organizations,
-                  along with individuals, are stepping up to provide necessary aid.
-                </p>
-    
-                <input
-                  type="number"
-                  placeholder="Write Donation Amount"
-                  class="input w-full border-2 border-gray-300 mt-8 px-14"
-                />
-                <button class="btn w-full bg-primary text-lg font-semibold mt-8 ">
-                  Donate Now
-                </button>
-              </div>
+          <!-- card-2 End -->
+
+          <!-- card-3 Start -->
+          <div
+            class="flex flex-col lg:flex-row gap-10 border-2 border-gray-200 rounded-2xl p-4 md:p-8"
+          >
+            <div class="">
+              <img
+                src="images/quota-protest.png"
+                alt=""
+                class="w-full md:w-auto"
+              />
             </div>
-            <!-- Card-3 End -->
+            <div class="flex-1">
+              <button class="btn">
+                <span><img src="images/coin.png" alt="" /></span>2400 BDT
+              </button>
+              <h2 class="text-xl font-bold mt-6">
+                Aid for Injured in the Quota Movement
+              </h2>
+              <p class="text-secondary mt-6">
+                Many state governments may offer compensation and medical aid
+                for individuals injured during protests. It's worth checking
+                local government websites or contacting
+              </p>
+
+              <input
+                type="number"
+                placeholder="Write Donation Amount"
+                class="input w-full border-2 border-gray-300 mt-8 px-5 md:px-14"
+              />
+              <button class="btn w-full bg-primary text-lg font-semibold mt-8">
+                Donate Now
+              </button>
+            </div>
+          </div>
+          <!-- card-3 End -->
         </div>
       </section>
-      <!-- Donate Banner part  End-->
+      <!-- Donate Banner part End -->
     </main>
-    <footer class="bg-zinc-100 w-full h-32">
-
-    </footer>
+    <footer class="bg-zinc-100 w-full h-32"></footer>
 
     <script src="./js/index.js"></script>
   </body>
