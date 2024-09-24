@@ -1,4 +1,3 @@
-
 //togle buttone word
 const historyBtn = document.getElementById("history-btn");
 const donationBtn = document.getElementById("donation-btn");
@@ -29,23 +28,28 @@ document.getElementById("cardOneBtn").addEventListener("click", function () {
   document.getElementById("cardOneTk").innerText =
     cardAmount + parseFloat(inputField);
   const amount = getInnerText("amount", true);
-  const sum = amount - parseFloat(inputField);
-  document.getElementById("amount").innerText = sum;
-  document.getElementById("cardOneInput").value = "";
-  genarateHtml(parseFloat(inputField), title);
-  Swal.fire({
-    title: "<strong>Congrates!!</strong>",
-    html: `
-    <div class="flex mb-10 justify-center items-center ">
-    <img src="https://raw.githubusercontent.com/rimasultana/B10A5/refs/heads/main/images/coin.png" />
-    </div>
-    You have successfully donated ${parseFloat(inputField)} BDT.
-    <h class="text-3xl"><strong>Seccessfully</strong></h>
-  `,
-    confirmButtonText: `
-    <i class="fa fa-thumbs-up"></i> Close Confirmation!
-  `,
-  });
+
+  if (parseInt(inputField) <= amount) {
+    const sum = amount - parseFloat(inputField);
+    document.getElementById("amount").innerText = sum;
+    document.getElementById("cardOneInput").value = "";
+    genarateHtml(parseFloat(inputField), title);
+    Swal.fire({
+      title: "<strong>Congrates!!</strong>",
+      html: `
+      <div class="flex mb-10 justify-center items-center ">
+      <img src="https://raw.githubusercontent.com/rimasultana/B10A5/refs/heads/main/images/coin.png" />
+      </div>
+      You have successfully donated ${parseFloat(inputField)} BDT.
+      <h class="text-3xl"><strong>Seccessfully</strong></h>
+    `,
+      confirmButtonText: `
+      <i class="fa fa-thumbs-up"></i> Close Confirmation!
+    `,
+    });
+  } else {
+    return alert("Please provide small amount in your main balance");
+  }
 });
 //card two
 document.getElementById("cardTwoBtn").addEventListener("click", function () {
@@ -60,23 +64,28 @@ document.getElementById("cardTwoBtn").addEventListener("click", function () {
   document.getElementById("cardTwoTk").innerText =
     cardAmount + parseFloat(inputField);
   const amount = getInnerText("amount", true);
-  const sum = amount - parseFloat(inputField);
-  document.getElementById("amount").innerText = sum;
-  document.getElementById("cardTwoInput").value = "";
-  genarateHtml(parseFloat(inputField), title);
-  Swal.fire({
-    title: "<strong>Congrates!!</strong>",
-    html: `
-    <div class="flex mb-10 justify-center items-center ">
-    <img src="https://raw.githubusercontent.com/rimasultana/B10A5/refs/heads/main/images/coin.png" />
-    </div>
-    You have successfully donated ${parseFloat(inputField)} BDT.
-    <h class="text-3xl"><strong>Seccessfully</strong></h>
-  `,
-    confirmButtonText: `
-    <i class="fa fa-thumbs-up"></i> Close Confirmation!
-  `,
-  });
+
+  if (parseInt(inputField) <= amount) {
+    const sum = amount - parseFloat(inputField);
+    document.getElementById("amount").innerText = sum;
+    document.getElementById("cardTwoInput").value = "";
+    genarateHtml(parseFloat(inputField), title);
+    Swal.fire({
+      title: "<strong>Congrates!!</strong>",
+      html: `
+      <div class="flex mb-10 justify-center items-center ">
+      <img src="https://raw.githubusercontent.com/rimasultana/B10A5/refs/heads/main/images/coin.png" />
+      </div>
+      You have successfully donated ${parseFloat(inputField)} BDT.
+      <h class="text-3xl"><strong>Seccessfully</strong></h>
+    `,
+      confirmButtonText: `
+      <i class="fa fa-thumbs-up"></i> Close Confirmation!
+    `,
+    });
+  } else {
+    return alert("Please provide small amount in your main balance");
+  }
 });
 //card three
 document.getElementById("cardThreeBtn").addEventListener("click", function () {
@@ -91,23 +100,28 @@ document.getElementById("cardThreeBtn").addEventListener("click", function () {
   document.getElementById("cardThreeTk").innerText =
     cardAmount + parseFloat(inputField);
   const amount = getInnerText("amount", true);
-  const sum = amount - parseFloat(inputField);
-  document.getElementById("amount").innerText = sum;
-  document.getElementById("cardThreeInput").value = "";
-  genarateHtml(parseFloat(inputField), title);
-  Swal.fire({
-    title: "<strong>Congrates!!</strong>",
-    html: `
-    <div class="flex mb-10 justify-center items-center ">
-    <img src="https://raw.githubusercontent.com/rimasultana/B10A5/refs/heads/main/images/coin.png" />
-    </div>
-    You have successfully donated ${parseFloat(inputField)} BDT.
-    <h class="text-3xl"><strong>Seccessfully</strong></h>
-  `,
-    confirmButtonText: `
-    <i class="fa fa-thumbs-up"></i> Close Confirmation!
-  `,
-  });
+
+  if (parseInt(inputField) <= amount) {
+    const sum = amount - parseFloat(inputField);
+    document.getElementById("amount").innerText = sum;
+    document.getElementById("cardThreeInput").value = "";
+    genarateHtml(parseFloat(inputField), title);
+    Swal.fire({
+      title: "<strong>Congrates!!</strong>",
+      html: `
+      <div class="flex mb-10 justify-center items-center ">
+      <img src="https://raw.githubusercontent.com/rimasultana/B10A5/refs/heads/main/images/coin.png" />
+      </div>
+      You have successfully donated ${parseFloat(inputField)} BDT.
+      <h class="text-3xl"><strong>Seccessfully</strong></h>
+    `,
+      confirmButtonText: `
+      <i class="fa fa-thumbs-up"></i> Close Confirmation!
+    `,
+    });
+  } else {
+    return alert("Please provide small amount in your main balance");
+  }
 });
 
 //reusable function
@@ -119,7 +133,11 @@ function getInnerText(id, number = false) {
   const text = document.getElementById(id).innerText;
   return text;
 }
-function getInputValu(id) {
+function getInputValu(id, number = false) {
+  if (number) {
+    const text = document.getElementById(id).value;
+    return parseFloat(text);
+  }
   const values = document.getElementById(id).value;
   return values;
 }
