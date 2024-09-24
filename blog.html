@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Daisy And Tailwind Css Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B4F461",
+              secondary: "#111111B3",
+            },
+            fontFamily: {
+              lexend: ["Lexend", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <section class="bg-zinc-50">
+      <nav
+        class="navbar w-11/12 mx-auto py-2 md:py-2 flex flex-row gap-4 items-center"
+      >
+        <div class="navbar-start items-center">
+          <a
+            onclick="window.location.href ='index.html'"
+            class="btn text-[10px] md:text-lg lg:text-xl bg-primary px-6"
+            >Home</a
+          >
+        </div>
+        <div class="navbar-center flex gap-1 items-center">
+          <img class="lg:w-7 w-4 md:w-5" src="images/logo.png" alt="" />
+          <div
+            class="md:flex items-center gap-1 hidden font-semibold text-[10px] md:text-lg lg:text-xl"
+          >
+            <p>Donate</p>
+            <p>Bangladesh</p>
+          </div>
+        </div>
+        <div class="navbar-end mt-4 md:mt-0 flex gap-0 items-center">
+          <img class="w-4 lg:w-8 md:w-6" src="images/coin.png" alt="" />
+          <a
+            class="btn btn-ghost text-[10px] md:text-lg lg:text-xl text-gray-400"
+            ><span id="amount">5500</span> BDT</a
+          >
+        </div>
+      </nav>
+    </section>
+    <section class="w-11/12 mx-auto mt-10 mb-20">
+      <div class="join join-vertical w-full">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the document Object model (dom)?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) is a programming interface for web
+              documents. It represents the structure of a web page in a
+              tree-like format, where each part of the document (like elements,
+              attributes, and text content) is a node that can be manipulated by
+              programming languages such as JavaScript.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            how do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              To select an element from the DOM (Document Object Model),
+              JavaScript provides several methods. These methods allow you to
+              access and manipulate specific elements or groups of elements
+              within a web page. Here are the most commonly used ways to select
+              elements from the DOM:
+              <strong>getElementById()</strong>
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p class="py-3">
+              Event delegation is a technique in the context of the DOM where a
+              single event listener is added to a parent element instead of
+              adding multiple listeners to individual child elements. The event
+              listener takes advantage of event bubbling (the process by which
+              events propagate up from the target element to the parent
+              elements) to handle events on child elements dynamically.
+            </p>
+            <p>
+              Event Bubbling: When an event occurs on an element, it first runs
+              any handlers on that element, then "bubbles" up to its parent, and
+              so on up to the root of the DOM. By listening on the parent, you
+              can capture events from any of its child elements. Using target
+              Property: The event object has a target property that tells you
+              which child element triggered the event. This allows you to
+              determine which child element was clicked or interacted with, even
+              though the listener is on the parent.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              To manipulate an element's attributes and styles using the DOM,
+              JavaScript provides several methods and properties. These allow
+              you to dynamically change attributes like src, href, id, and
+              modify styles like color, background, font-size, etc. .
+              Manipulating Attributes You can get, set, or remove attributes of
+              an element using the following methods: a. getAttribute() This
+              method retrieves the value of a specified attribute from an
+              element
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
