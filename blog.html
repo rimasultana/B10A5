@@ -16,6 +16,11 @@
       rel="stylesheet"
       type="text/css"
     />
+    <!-- font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/da72d6e058.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -35,35 +40,39 @@
   </head>
   <body>
     <section class="bg-zinc-50">
-      <nav
-        class="navbar w-11/12 mx-auto py-2 md:py-2 flex flex-row gap-4 items-center"
-      >
-        <div class="navbar-start items-center">
+      <nav class="flex justify-between items-center w-11/12 mx-auto py-5">
+        <div class="">
           <a
             onclick="window.location.href ='index.html'"
             class="btn text-[10px] md:text-lg lg:text-xl bg-primary px-6"
             >Home</a
           >
         </div>
-        <div class="navbar-center flex gap-1 items-center">
+        <div class="flex items-center gap-2">
           <img class="lg:w-7 w-4 md:w-5" src="images/logo.png" alt="" />
           <div
             class="md:flex items-center gap-1 hidden font-semibold text-[10px] md:text-lg lg:text-xl"
           >
-            <p>Donate</p>
-            <p>Bangladesh</p>
+            <p>Donate Bangladesh</p>
           </div>
         </div>
-        <div class="navbar-end mt-4 md:mt-0 flex gap-0 items-center">
-          <img class="w-4 lg:w-8 md:w-6" src="images/coin.png" alt="" />
-          <a
-            class="btn btn-ghost text-[10px] md:text-lg lg:text-xl text-gray-400"
+        <div
+          class="flex items-center gap-1 p-2 rounded-md border-2 border-primary"
+        >
+          <img class="w-4 lg:w-8 md:w-6 mx-auto" src="images/coin.png" alt="" />
+          <a class="text-[15px] md:text-lg lg:text-x font-bold"
             ><span id="amount">5500</span> BDT</a
           >
         </div>
       </nav>
     </section>
     <section class="w-11/12 mx-auto mt-10 mb-20">
+      <h1 class="text-4xl font-bold mb-5">
+        Important FAQ
+        <i
+          class="fa-solid fa-question rounded-full p-3 border-4 border-primary"
+        ></i>
+      </h1>
       <div class="join join-vertical w-full">
         <div class="collapse collapse-arrow join-item border-base-300 border">
           <input type="radio" name="my-accordion-4" checked="checked" />
